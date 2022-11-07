@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+// dp로도 풀어야 할 것 같음
 public class Main_1446_지름길_dijk {
 
 	public static void main(String[] args) throws Exception{
