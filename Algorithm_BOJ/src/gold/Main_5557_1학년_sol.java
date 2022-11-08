@@ -42,26 +42,6 @@ public class Main_5557_1학년_sol {
 			}
 		}
 		
-//		for (int i = 0; i < 21; i++) {
-//			System.out.print(i+" ");
-//		}
-//		System.out.println();
-//		
-//		int idx=0;
-//		for (int[] x : dp) {
-//			System.out.print(A[idx++]+" : ");
-//			for (int y: x) {
-//				System.out.print(y + " ");
-//			}
-//			System.out.println();
-//		}
-
-//
-//		int total=0;
-//		for (int y : dp[N-1]) {
-//			if(y!=0) total+= y;
-//		}
-		
 		System.out.println(dp[N-2][A[N-1]]);
 	}
 }
