@@ -65,21 +65,23 @@ public class Main_1956_운동_floyd {
 			for (int i = 1; i <= V; i++) {
 				for (int j = 1; j <= V; j++) {
 					// i에서 j로 갈 떄 
-					if(graph[i][k]!=INF && graph[k][j]!=INF) {
-						graph[i][j] = Math.min(graph[i][j], graph[i][k]+graph[k][j]);
+					int before = graph[i][j];
+					int r1 = graph[i][k];
+					int r2 = graph[k][j];
+					
+					if(r1!=INF && r2!=INF) {
+						graph[i][j] = Math.min(before, r1+r2);
 					}
 				}
 			}
 		}
 		
 		int ans = INF;
+		
 		for (int i = 1; i <= V; i++) {
-			for (int j = 1; j <= V; j++) {
-				if(i==j) ans = Integer.min(ans, graph[i][j]);
-			}
+			ans = Integer.min(ans, graph[i][i]);
 		}
 		
-		if(ans!=INF) System.out.println(ans);
-		else System.out.println(-1);
+		System.out.println(ans!=INF?ans:-1);
 	}
 }

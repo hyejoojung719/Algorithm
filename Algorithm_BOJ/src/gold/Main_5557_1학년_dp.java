@@ -51,20 +51,28 @@ public class Main_5557_1학년_dp {
 		if(0<=num2 && num2<=20) dp[1][1] = num2;
 		else dp[1][1] = -1;
 		
+		System.out.println(dp[1][0] + " : " +dp[1][1]);
+		
 		for (int i = 2; i < N; i++) {
 			int size = (int)Math.pow(2, i);
 			int s = size/2;
 			int k = s/2;
 			int t = 0;
+			System.out.println("size : " + size);
 			for (int j = 0; j < size; j++) {
+				
+				System.out.println("k : " + k);
+				System.out.println("t : " + t);
+				System.out.println("dp[k][t] : " + dp[k][t]);
+				
 				if(j%2==0) {
 					// +
 					if(dp[k][t] == -1) {
 						dp[k][0] = -1;
 					}else {
 						int temp = dp[k][t] + A[i];
-						if(0<=temp && temp<=20) dp[k][0] = temp;
-						else dp[k][0] = -1;
+						if(0<=temp && temp<=20) dp[s][0] = temp;
+						else dp[s][0] = -1;
 					}
 					
 				}else {
@@ -74,25 +82,38 @@ public class Main_5557_1학년_dp {
 						dp[k][0] = -1;
 					}else {
 						int temp = dp[k][t] - A[i];
-						if(0<=temp && temp<=20) dp[k][1] = temp;
-						else dp[k][1] = -1;
+						if(0<=temp && temp<=20) dp[s][1] = temp;
+						else dp[s][1] = -1;
 					}
 					
-					k++;
+					if(j%4==0) k++;
+					
+					s++;
 					
 					if(t==0) t=1;
 					else t=0;
 				}
+				
 			}
 		}
 		
+		for (int[] is : dp) {
+			for (int x :is) {
+				System.out.print(x + " ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println(length);
+		
 		int total=0;
-		for (int i = length/2-1; i > length/2-Math.pow(2,N-1)/2; i--) {
+		for (int i = length/2-1; i >= length/2-Math.pow(2,N-1)/2; i--) {
 			for (int j = 0; j < 2; j++) {
 				if(dp[i][j]!=-1) {
 					total++;
 				}
 			}
+			System.out.println();
 		}
 		System.out.println(total);
 	}
