@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 
 public class Main_1956_운동_floyd {
 	static final int INF = Integer.MAX_VALUE;
-	
+	 
 	public static void main(String[] args) throws Exception{
 		// 문제
 		// V개 마을, E개 도로
