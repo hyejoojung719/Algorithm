@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_5557_1학년_sol {
+public class Main_5557_1학년_dp_h {
 	public static void main(String[] args) throws Exception{
 		// 문제
 		// +, - 를 넣어서 계싼
