@@ -42,6 +42,13 @@ public class Main_5557_1학년_sol {
 			}
 		}
 		
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j <= 20; j++) {
+				System.out.print(dp[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
 		System.out.println(dp[N-2][A[N-1]]);
 	}
 }
