@@ -26,12 +26,12 @@ public class Main_5557_1학년_dp_h {
 		}
 
 		// dp 테이블
-		long[][] dp = new long[N][21];
+		long[][] dp = new long[N-1][21];
 
 		// 초기화
 		dp[0][A[0]]=1;
 
-		for (int i = 1; i < N; i++) {
+		for (int i = 1; i < N-1; i++) {
 			for (int j = 0; j <= 20; j++) {
 				if(dp[i-1][j] != 0) {
 					// 1. 더하기
@@ -42,7 +42,7 @@ public class Main_5557_1학년_dp_h {
 			}
 		}
 		
-		for (int i = 0; i < N; i++) {
+		for (int i = 0; i < N-1; i++) {
 			for (int j = 0; j <= 20; j++) {
 				System.out.print(dp[i][j]+" ");
 			}
