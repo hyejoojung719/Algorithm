@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class boj1806_부분합 {
+public class Main_boj1806_부분합 {
 	public static void main(String[] args) throws IOException{
 		
 		// 10000이하의 자연수로 이루어진 길이 N짜리 수열이 있음
